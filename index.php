@@ -27,10 +27,9 @@ $result = $db->query($sql);
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <button type="button" data-toggle="modal" data-target="#modal-todo" class="col-md-4 btn btn-outline-success btn-lg">+</button>
-        <!-- <button type="button" class="col-md-4 btn btn-outline-danger btn-lg">
-          <img id="myimage" src="img/minus.png"/>
-        </button> -->
+        <button type="button" data-toggle="modal" data-target="#modal-todo" class="col-md-4 mb-4 btn btn-light btn-lg">
+          <img id="myimage" src="img/plus.png"/>
+        </button>
       </div>
     </div>
   </div>
@@ -53,15 +52,19 @@ $result = $db->query($sql);
             <textarea class="form-control" name="taskdescription"></textarea>
           </div>
           <div class="modal-footer">
-            <button type="submit" name="send" class="btn btn-primary">Add</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" name="send" class="btn btn-outline-light btn-lg">
+              <img id="myimage" src="img/check.png"/>
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg" data-dismiss="modal">
+              <img id="myimage" src="img/clear.png"/>
+            </button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
-  <div class="row">
+  <div class="row table-responsive">
     <table class="table table-hover">
       <thead>
         <tr>
