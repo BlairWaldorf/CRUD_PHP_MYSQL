@@ -45,20 +45,18 @@ $result = $db->query($sql);
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="add.php">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Task:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
+            <label class="col-form-label">Task:</label>
+            <input type="text" class="form-control" required name="taskname">
             <label for="message-text" class="col-form-label">Description:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" name="taskdescription"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" name="send" class="btn btn-primary">Add</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Add</button>
       </div>
     </div>
   </div>
@@ -80,12 +78,12 @@ $result = $db->query($sql);
           <td><?php echo $row['name'] ?></td>
           <td><?php echo $row['description'] ?></td>
           <td>
-            <button type="button" class="btn btn-outline-light btn-lg">
+            <a class="btn btn-outline-light btn-lg">
               <img id="myimage" src="img/edit.png"/>
-            </button>
-            <button type="button" class="btn btn-outline-light btn-lg">
+            </a>
+            <a  href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-outline-light btn-lg">
               <img id="myimage" src="img/delete.png"/>
-            </button>
+            </a>
           </td>
         </tr>
         <?php endwhile ?>
