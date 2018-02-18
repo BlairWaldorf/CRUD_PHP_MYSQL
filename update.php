@@ -35,10 +35,10 @@ if(isset($_POST['update'])){
 <div class="container">
   <form method="POST">
     <div class="form-group">
-      <label class="col-form-label">Task:</label>
-      <input type="text" class="form-control" required name="taskname" value="<?php echo $row['name'];?>">
-      <label for="message-text" class="col-form-label">Description:</label>
-      <textarea class="form-control" name="taskdescription"><?php echo $row['description'];?></textarea>
+      <label class="col-form-label labelModal">Task:</label>
+      <input type="text" class="form-control inputModal" required name="taskname" value="<?php echo $row['name'];?>">
+      <label for="message-text" class="col-form-label labelModal">Description:</label>
+      <textarea class="form-control inputModal" name="taskdescription"><?php echo $row['description'];?></textarea>
     </div>
     <div class="modal-footer">
       <button type="submit" name="update" class="btn btn-outline-light btn-lg">

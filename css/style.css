@@ -2,7 +2,34 @@ body{
   font-family: 'Slabo 27px', serif;
 }
 
+h1 {
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing:10px;
+  color: rgb(52, 52, 52);
+}
+
 #myimage {
-  height: 20px;
+  height: 40px;
   width: auto;
+}
+
+table td {
+  vertical-align: middle !important;
+  font-size: 20px;
+}
+
+table th {
+  font-size: 20px;
+  color: rgb(52, 52, 52);
+  text-align:center;
+}
+
+.labelModal{
+  font-weight: bolder;
+}
+
+.labelModal, .inputModal {
+  font-size: 20px;
+  color: rgb(52, 52, 52);
 }

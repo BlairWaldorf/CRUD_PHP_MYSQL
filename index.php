@@ -49,10 +49,10 @@ $result = $db->query($sql);
       <div class="modal-body">
         <form method="POST" action="add.php">
           <div class="form-group">
-            <label class="col-form-label">Task:</label>
-            <input type="text" class="form-control" required name="taskname">
-            <label for="message-text" class="col-form-label">Description:</label>
-            <textarea class="form-control" name="taskdescription"></textarea>
+            <label class="col-form-label labelModal">Task:</label>
+            <input type="text" class="form-control inputModal" required name="taskname">
+            <label for="message-text" class="col-form-label labelModal">Description:</label>
+            <textarea class="form-control inputModal" name="taskdescription"></textarea>
           </div>
           <div class="modal-footer">
             <button type="submit" name="send" class="btn btn-outline-light btn-lg">
@@ -83,7 +83,7 @@ $result = $db->query($sql);
           <th scope="row"><?php echo $row['id'] ?></th>
           <td><?php echo $row['name'] ?></td>
           <td><?php echo $row['description'] ?></td>
-          <td>
+          <td align="center">
             <a href="update.php?id=<?php echo $row['id'];?>" class="btn btn-outline-light btn-lg">
               <img id="myimage" src="img/edit.png"/>
             </a>
