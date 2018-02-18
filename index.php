@@ -77,7 +77,7 @@ $result = $db->query($sql);
       <tbody>
         <tr>
           <?php while($row = $result->fetch_assoc()): ?>
-          <th scope="row"><?php echo $row['id']  ?></th>
+          <th scope="row"><?php echo $row['id'] ?></th>
           <td><?php echo $row['name'] ?></td>
           <td><?php echo $row['description'] ?></td>
           <td>

@@ -41,7 +41,7 @@ if(isset($_POST['update'])){
       <textarea class="form-control" name="taskdescription"><?php echo $row['description'];?></textarea>
     </div>
     <div class="modal-footer">
-      <button type="submit" name="send" class="btn btn-outline-light btn-lg">
+      <button type="submit" name="update" class="btn btn-outline-light btn-lg">
         <img id="myimage" src="img/check.png"/>
       </button>
       <button type="button" class="btn btn-outline-light btn-lg" data-dismiss="modal">
