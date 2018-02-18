@@ -1,4 +1,9 @@
-<?php include 'db.php'; ?>
+<?php include 'db.php';
+
+$sql = "SELECT * FROM tasks";
+$result = $db->query($sql);
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -22,9 +27,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 text-center">
-        <button type="button" data-toggle="modal" data-target="#modal-todo" class="col-md-4 btn btn-outline-success btn-lg">
-          <img id="myimage" src="img/plus.png"/>
-        </button>
+        <button type="button" data-toggle="modal" data-target="#modal-todo" class="col-md-4 btn btn-outline-success btn-lg">+</button>
         <!-- <button type="button" class="col-md-4 btn btn-outline-danger btn-lg">
           <img id="myimage" src="img/minus.png"/>
         </button> -->
@@ -72,9 +75,10 @@
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
+          <?php while($row = $result->fetch_assoc()): ?>
+          <th scope="row"><?php echo $row['id']  ?></th>
+          <td><?php echo $row['name'] ?></td>
+          <td><?php echo $row['description'] ?></td>
           <td>
             <button type="button" class="btn btn-outline-light btn-lg">
               <img id="myimage" src="img/edit.png"/>
@@ -84,27 +88,11 @@
             </button>
           </td>
         </tr>
-
+        <?php endwhile ?>
       </tbody>
     </table>
   </div>
 </div>
-
-<!-- Firebase connection -->
-<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAb3hhX_asiAwQAVdwiN74CC8BFd8mZ6Pc",
-    authDomain: "crud-php-ad846.firebaseapp.com",
-    databaseURL: "https://crud-php-ad846.firebaseio.com",
-    projectId: "crud-php-ad846",
-    storageBucket: "crud-php-ad846.appspot.com",
-    messagingSenderId: "16127055915"
-  };
-  firebase.initializeApp(config);
-</script>
-<!-- Firebase connection -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
