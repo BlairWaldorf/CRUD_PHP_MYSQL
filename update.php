@@ -44,9 +44,9 @@ if(isset($_POST['update'])){
       <button type="submit" name="update" class="btn btn-outline-light btn-lg">
         <img id="myimage" src="img/check.png"/>
       </button>
-      <button type="button" class="btn btn-outline-light btn-lg" data-dismiss="modal">
+      <a href="index.php"class="btn btn-outline-light btn-lg">
         <img id="myimage" src="img/clear.png"/>
-      </button>
+      </a>
     </div>
   </form>
 </div>

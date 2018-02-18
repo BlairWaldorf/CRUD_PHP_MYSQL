@@ -30,6 +30,9 @@ $result = $db->query($sql);
         <button type="button" data-toggle="modal" data-target="#modal-todo" class="col-md-4 mb-4 btn btn-light btn-lg">
           <img id="myimage" src="img/plus.png"/>
         </button>
+        <button type="button" data-toggle="modal" data-target="#modal-todo" class="mb-4 btn btn-light btn-lg" onclick="print();">
+          <img id="myimage" src="img/print.png"/>
+        </button>
       </div>
     </div>
   </div>
