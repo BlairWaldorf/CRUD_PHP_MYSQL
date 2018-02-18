@@ -78,7 +78,7 @@ $result = $db->query($sql);
           <td><?php echo $row['name'] ?></td>
           <td><?php echo $row['description'] ?></td>
           <td>
-            <a class="btn btn-outline-light btn-lg">
+            <a href="update.php?id=<?php echo $row['id'];?>" class="btn btn-outline-light btn-lg">
               <img id="myimage" src="img/edit.png"/>
             </a>
             <a  href="delete.php?id=<?php echo $row['id'];?>" class="btn btn-outline-light btn-lg">
