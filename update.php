@@ -1,12 +1,18 @@
+<!-- updating page -->
 <?php include 'db.php';
 
 $id=$_GET['id'];
+
+//selecting all data from db where id matches to selected id's row
 $sql = "SELECT * FROM tasks WHERE id ='$id'";
+
+// applying query and storing into $result variable
 $result = $db->query($sql);
 $row = $result->fetch_assoc();
 if(isset($_POST['update'])){
   $taskname = $_POST['taskname'];
   $taskdescription = $_POST['taskdescription'];
+  //updating entrys
   $sql2 = "UPDATE tasks SET name='$taskname', description='$taskdescription' WHERE id = '$id'";
   $db->query($sql2);
   header('location: index.php');
@@ -32,6 +38,7 @@ if(isset($_POST['update'])){
     </div>
   </div>
 </div>
+<!-- Bootstrap Modal -->
 <div class="container">
   <form method="POST">
     <div class="form-group">
